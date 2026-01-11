@@ -1,0 +1,274 @@
+    :root {
+  --uum-blue: #003366;
+  --uum-yellow: #ffcc00;
+  --white: #ffffff;
+  --light-bg: #2d3957;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  background: var(--light-bg);
+  color: #222;
+  line-height: 1.6;
+}
+
+/* ===== Header layout ===== */
+.uum-header {
+  background: var(--white);
+  color: var(--uum-blue);
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  padding: 14px 24px;
+  gap: 20px;
+  border-bottom: 4px solid var(--uum-blue);
+}
+
+/* Left section */
+.header-left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.uum-logo {
+  height: 70px;
+  margin-bottom: 4px;
+}
+
+.header-subtitle {
+  font-size: 0.85em;
+  color: var(--uum-blue);
+  opacity: 0.9;
+}
+
+/* Center title */
+.header-center {
+  text-align: center;
+}
+
+.header-center h1 {
+  margin: 0;
+  font-size: 1.4em;
+  font-weight: 700;
+  color: var(--uum-blue);
+}
+
+/* Right navigation */
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.header-right a {
+  color: var(--uum-blue);
+  text-decoration: none;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.header-right a:hover {
+  color: var(--uum-yellow);
+}
+
+.header-right select {
+  background: var(--white);
+  color: var(--uum-blue);
+  padding: 4px 8px;
+  border-radius: 6px;
+  border: 1px solid var(--uum-blue);
+  cursor: pointer;
+}
+
+nav {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+  margin-top: 10px;
+}
+
+nav a {
+  color: var(--white);
+  text-decoration: none;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+nav a:hover { color: var(--uum-yellow); }
+
+select {
+  background: var(--white);
+  color: var(--uum-blue);
+  padding: 4px 8px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+}
+
+main {
+  padding: 24px;
+  max-width: 1000px;
+  margin: auto;
+  box-sizing: border-box;
+}
+
+.page {
+  display: none;
+  animation: fadeIn 0.4s ease-in;
+}
+
+.page.active { display: block; }
+
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+
+.segment {
+  background: var(--white);
+  padding: 20px;
+  border-radius: 14px;
+  box-shadow: var(--card-shadow);
+  margin-bottom: 26px;
+  overflow: hidden;
+}
+
+.segment img {
+  display: block;
+  width: 100%;
+  max-height: 250px;
+  object-fit: cover;
+  border-radius: 12px 12px 0 0;
+  margin-bottom: 12px;
+}
+
+audio {
+  width: 100%;
+  max-width: 100%;
+  margin-top: 10px;
+}
+
+.transcript-btn {
+  background: var(--uum-blue);
+  color: var(--white);
+  border: none;
+  border-radius: 6px;
+  padding: 8px 12px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 8px;
+}
+
+.transcript-btn:hover { background: var(--uum-yellow); color: var(--uum-blue); }
+
+.transcript {
+  display: none;
+  margin-top: 10px;
+  background: #f9f9f9;
+  padding: 12px;
+  border-left: 4px solid var(--uum-blue);
+  border-radius: 6px;
+  font-size: 0.95em;
+  word-wrap: break-word;
+}
+
+.feedback-container {
+  background: var(--white);
+  padding: 24px;
+  border-radius: 14px;
+  box-shadow: var(--card-shadow);
+  max-width: 600px;
+  margin: auto;
+}
+
+.feedback-container h2 { color: var(--uum-blue); }
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+input, textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1em;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+button {
+  background: var(--uum-blue);
+  color: var(--white);
+  border: none;
+  border-radius: 8px;
+  padding: 10px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:hover { background: var(--uum-yellow); color: var(--uum-blue); }
+
+/* ================================
+   ABOUT US PAGE STYLES
+================================ */
+
+#about-page {
+  padding: 40px 20px;
+  color: var(--white); /* semua teks default putih */
+  text-align: center; /* tengahkan teks */
+}
+
+#about-page h2,
+#about-page h3 {
+  color: var(--white); /* heading putih */
+  margin-bottom: 16px;
+}
+
+.about-desc {
+  max-width: 800px;
+  margin: 0 auto 35px;
+  line-height: 1.7;
+  font-size: 16px;
+  color: var(--white); /* paragraph putih */
+}
+
+/* TEAM SECTION */
+.team-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: 28px;
+  margin-top: 30px;
+}
+
+.team-card {
+  background: var(--white); /* gelap supaya team card blend dengan page */
+  border-radius: 16px;
+  padding: 22px 18px;
+  text-align: center;
+  box-shadow: 0 8px 18px rgba(0,0,0,0.12);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  color: var(--white); /* teks nama & matric putih */
+}
+
+.team-card h4,
+.team-card p {
+  color: var(--uum-blue); /* teks di dalam card putih */
+}
+
+.team-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.18);
+}
+
+.team-card img {
+  width: 140px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid var(--uum-blue); /* optional: border cerah */
+  margin-bottom: 14px;
+}
